@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block sub_content %}
+<div class="text-center">
+    <abbr title="Новый пост"><h1>Edit Post</h1></abbr>
+</div>
+<div class="p-5">
+<form method='POST'>
+    <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" name="title" value="{{blog_form['title']}}">   
+  </div>
+  <div class="form-group">
+    <label for="body">Body</label>
+    <textarea type="text" class="form-control ckeditor" id="body" name="body" >
+        {{ blog_form['body'] }}
+    </textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock sub_content %}
